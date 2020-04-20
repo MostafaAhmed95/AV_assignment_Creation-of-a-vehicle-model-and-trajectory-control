@@ -181,6 +181,7 @@ model.yc=waypoints_np[0][1]
 model.v=waypoints_np[0][2]
 for i in range(len(waypoints_np)):
 
+    
     desired_x = waypoints_np[i][0]
     desired_y = waypoints_np[i][0]
     desired_v = waypoints_np[i][0]
@@ -192,6 +193,7 @@ for i in range(len(waypoints_np)):
     x_data.append(model.xc)
     y_data.append(model.yc)
     model.step(model.v, steer)
+
 
 plt.axis('equal')
 plt.plot(x_data, y_data, label='Model')
